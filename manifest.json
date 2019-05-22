@@ -1,0 +1,23 @@
+{
+    "name": "Web Builder Button",
+    "manifest_version": 2,
+    "version": "0.1",
+    "description": "Opens link to TR Web Builder editor on originator page",
+    "background": {
+      "persistent": false,
+      "scripts": ["js/background.js"]
+    },
+    "icons" :{
+      "16": "images/wbcs_16.png",
+      "48": "images/wbcs_48.png",
+      "128": "images/wbcs_128.png"
+    },
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"]
+    }],
+    "browser_action": {},
+    "permissions": [
+        "activeTab", "http://*/*", "https://*/*, storage"
+    ]
+}
